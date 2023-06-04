@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>MedTest@Home</title>
+</head>
+
+<body>
+
+	<h1 style="text-align:center; font-family:verdana; font-size:300%;">MedTest@Home </h1>
+  <p style=" font-family:Trebuchet MS; font-size:150%;"> Enter the symptoms to predict the disease </p>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Symptom1" placeholder="Symptom1" required="required" />
+      <input type="text" name="Symptom2" placeholder="Symptom2" required="required" />
+		  <input type="text" name="Symptom3" placeholder="Symptom3" required="required" />
+		  <input type="text" name="Symptom4" placeholder="Symptom4" required="required" value="vomiting" />
+
+        <button style="background-color: #3b5998; size: 15px; border-radius: 6px; color: aliceblue;" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <form action="{{ url_for('symptomsList')}}"method="post">
+
+        <button style="background-color: #3b5998; size: 15px; border-radius: 8px; color: aliceblue" type="submit" class="btn btn-primary btn-block btn-large">List of Symptoms</button>
+    </form>
+
+   <br>
+   <br>
+   <p style=" font-family:Trebuchet MS; font-size:150%; text-align:center;"> {{ prediction_text }}</p>
+
+   <br>
+   <br>
+   <p style=" font-family:Trebuchet MS; font-size:150%; text-align:center;"></pstyle>{{ symptom_text }}</p>
+</body>
+</html>
