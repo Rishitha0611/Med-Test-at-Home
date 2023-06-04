@@ -6,10 +6,8 @@ The main goal of the project is to decrease the medical related issues faced by 
 We used three different endpoints to perform three different operations: 
 1. “/”
 This endpoint calls the HTML page which is our webpage where user enters the symptoms
-
 2. “/predict”
 When user enters the symptoms and clicks on predict button this endpoint is invoked. This is responsible in sending the symptoms entered to prediction function and showing the predicted disease in the output. Also, Precautions are displayed by calling the precaution function using then disease predicted from prediction function
-
 3. “/symptomsList”
 This endpoint comes into picture when the symptomsList button is clicked. This helps the user to choose the symptom from the variety of symptoms.
 
